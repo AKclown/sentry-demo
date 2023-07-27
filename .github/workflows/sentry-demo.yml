@@ -1,0 +1,30 @@
+# Sentry-demo
+name: Sentry-Demo
+
+on:
+  push:
+    branches:
+      - master
+    paths: # 触发作用域
+      - '.github/workflows/**'
+      - '__test__/**'
+      - 'src/**'
+
+jobs:
+  test: # job名称
+    runs-on: ubuntu-latest # 运行环境
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Create Sentry release
+        uses: getsentry/action-release@v1
+        env:
+          SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_AUTH_TOKEN }}  
+          SENTRY_ORG: ${{ secrets.SENTRY_ORG }}
+          SENTRY_PROJECT: ${{ secrets.SENTRY_PROJECT }}
+          # SENTRY_URL: https://sentry.io/
+        with:
+          environment: production
+
