@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,6 +19,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={() => { throw new Error('this is known issues') }}>error</button>
       </header>
     </div>
   );
