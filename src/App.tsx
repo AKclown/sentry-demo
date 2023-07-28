@@ -4,6 +4,10 @@ import './App.css';
 
 function App() {
 
+ const  throwError = () =>{
+    throw new Error('this is known issues')
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +23,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={() => { throw new Error('this is known issues') }}>error</button>
+        <button onClick={throwError}>error</button>
       </header>
     </div>
   );
