@@ -19,8 +19,8 @@ jobs:
           fetch-depth: 0
       - name: build package
         run: | # 自定义命令
-          npm i 
-          npm build
+          npm ci 
+          npm run build
       - name: Create Sentry release
         uses: getsentry/action-release@v1
         env:
