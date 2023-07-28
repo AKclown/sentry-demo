@@ -24,7 +24,7 @@ Sentry.init({
   tracePropagationTargets: ["localhost", /^https:\/\/yourserver\.io\/api/],
   replaysSessionSampleRate: 0.1,
   replaysOnErrorSampleRate: 1.0,
-  release: "AKclown-demo@1.0.4",
+  release: "sentry-demo@1.0.6",
 
 });
 
