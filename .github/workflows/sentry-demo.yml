@@ -27,4 +27,6 @@ jobs:
           # SENTRY_URL: https://sentry.io/
         with:
           environment: production
+          sourcemaps: '../../build'
+
 
