@@ -31,3 +31,5 @@ jobs:
         with:
           environment: production
           sourcemaps: ./build
+          version: sentry-demo@1.0.5
+          projects: ${{ secrets.SENTRY_PROJECT }}
