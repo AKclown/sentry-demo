@@ -24,9 +24,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sentry:sourcemaps": "sentry-cli sourcemaps inject --org akclown --project sentry-demo ./build && sentry-cli sourcemaps upload --org akclown --project sentry-demo ./build",
+    "build": "react-scripts build && npm run sentry:sourcemaps"
   },
   "eslintConfig": {
     "extends": [
