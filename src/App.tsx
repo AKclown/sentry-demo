@@ -5,7 +5,7 @@ import './App.css';
 function App() {
 
  const  throwError = () =>{
-    throw new Error('this is known issues')
+    throw new Error('哈哈哈，是我哦')
   }
 
   return (
